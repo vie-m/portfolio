@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vinson Mervin | Portfolio</title>
+  <meta name="description" content="Portfolio of Vinson Mervin, Computer Science student at BINUS University focused on databases, data analytics and data engineering.">
+  <meta name="theme-color" content="#070b14">
+
+  <!-- Tiny inline icon so the browser does not ask for a favicon file (avoids a console error) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23070b14'/%3E%3Ctext x='32' y='43' font-size='30' font-family='Arial' font-weight='700' text-anchor='middle' fill='%2322d3ee'%3EVM%3C/text%3E%3C/svg%3E">
+
+  <!-- Fonts: Inter (body), Space Grotesk (headings), JetBrains Mono (small labels) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- Icons: Devicon (programming languages) and Font Awesome (everything else) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Tells the CSS that JavaScript works, so scroll animations are allowed to hide things first -->
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+
+<body>
+  <a class="skip-link" href="#about">Skip to content</a>
+
+  <!-- Animated particle background (drawn by script.js) -->
+  <canvas id="bg" aria-hidden="true"></canvas>
+
+  <!-- ============ NAVBAR (sticky, turns into a hamburger menu on phones) ============ -->
+  <header class="navbar" id="navbar">
+    <nav class="nav-inner" aria-label="Main navigation">
+      <a class="brand" href="#home" aria-label="Vinson Mervin, back to top">VM<span>.</span></a>
+
+      <button class="nav-toggle" id="nav-toggle" type="button"
+              aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ============ 1. HERO ============ -->
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="container">
+        <!-- The name is typed by script.js. The text inside is only used if JavaScript is off. -->
+        <h1 id="hero-title">Hi, I'm <span class="grad" id="typed-name">Vinson Mervin</span><span class="cursor" id="name-cursor" aria-hidden="true"></span></h1>
+        <!-- Rotating subtitle (roles are listed at the top of script.js) -->
+        <p class="hero-sub"><span id="typed-role">Computer Science Student</span><span class="cursor" aria-hidden="true"></span></p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#projects">View My Projects <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a>
+          <a class="btn btn-ghost" href="#contact">Contact Me</a>
+          <!-- Download CV: script.js (section 9) catches the click and saves the PDF as a file.
+               To use a new CV, run:  python cv-draft/make_cv.py --publish   (it updates the 2 CV files in this folder) -->
+          <a class="btn btn-ghost" id="cv-download" href="Vinson_Mervin_CV.pdf" download="Vinson_Mervin_CV.pdf" type="application/pdf">
+            <i class="fa-solid fa-download" aria-hidden="true"></i> Download CV
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 2. ABOUT ME ============ -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <p class="kicker reveal">01 / about</p>
+        <h2 class="section-title reveal" id="about-title">About Me</h2>
+
+        <div class="about-grid">
+          <div class="reveal">
+            <p class="lead">
+              I'm a Computer Science student at <strong>BINUS University</strong> (2024 &ndash; present),
+              focused on databases. I like turning raw data into clean models and clear answers.
+            </p>
+
+            <!-- Interests -->
+            <ul class="chips" aria-label="Interests">
+              <li><i class="fa-solid fa-chart-line" aria-hidden="true"></i> Data Analytics</li>
+              <li><i class="fa-solid fa-database" aria-hidden="true"></i> Data Engineering</li>
+              <li><i class="fa-solid fa-brain" aria-hidden="true"></i> Machine Learning</li>
+            </ul>
+          </div>
+
+          <!-- GPA stat card -->
+          <div class="stat-card reveal" style="--d:.1s">
+            <p class="stat-label">Current GPA</p>
+            <p class="stat-value">3.41<span> / 4.00</span></p>
+            <p class="stat-note">BINUS University</p>
+          </div>
+        </div>
+
+        <h3 class="sub-title reveal">Away from the keyboard</h3>
+        <div class="hobby-grid">
+          <div class="hobby-card reveal">
+            <!-- Billiards: Font Awesome has no pool icon, so this is a small inline 8-ball -->
+            <svg class="hobby-icon" viewBox="0 0 48 48" role="img" aria-label="Billiards 8-ball">
+              <circle cx="24" cy="24" r="20" fill="none" stroke="currentColor" stroke-width="3"/>
+              <circle cx="24" cy="24" r="12" fill="currentColor"/>
+              <text x="24" y="30" font-size="17" font-weight="700" font-family="Arial, sans-serif" text-anchor="middle" fill="#070b14">8</text>
+            </svg>
+            <div>
+              <h4>Billiards / Pool</h4>
+              <p>I play pool to train my focus.</p>
+            </div>
+          </div>
+
+          <div class="hobby-card reveal" style="--d:.1s">
+            <i class="fa-solid fa-dumbbell hobby-icon" aria-hidden="true"></i>
+            <div>
+              <h4>Gym</h4>
+              <p>I train consistently.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 3. SKILLS ============ -->
+    <section class="section" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <p class="kicker reveal">02 / skills</p>
+        <h2 class="section-title reveal" id="skills-title">Skills</h2>
+
+        <!-- To add a skill: copy one <li>, change the icon class and the name.
+             Icon names: https://devicon.dev  (class "devicon-NAME-plain colored") -->
+        <ul class="skills-grid">
+          <li class="skill reveal" style="--d:0s"><i class="devicon-c-plain colored" aria-hidden="true"></i><span>C</span></li>
+          <li class="skill reveal" style="--d:.05s"><i class="devicon-java-plain colored" aria-hidden="true"></i><span>Java</span></li>
+          <li class="skill reveal" style="--d:.1s"><i class="devicon-python-plain colored" aria-hidden="true"></i><span>Python</span></li>
+          <li class="skill reveal" style="--d:.15s"><i class="devicon-javascript-plain colored" aria-hidden="true"></i><span>JavaScript</span></li>
+          <li class="skill reveal" style="--d:.2s"><i class="devicon-html5-plain colored" aria-hidden="true"></i><span>HTML</span></li>
+          <li class="skill reveal" style="--d:.25s"><i class="devicon-css3-plain colored" aria-hidden="true"></i><span>CSS</span></li>
+          <!-- Devicon has no generic "SQL" icon, so this one is a Font Awesome database icon -->
+          <li class="skill reveal" style="--d:.3s"><i class="fa-solid fa-database sql-icon" aria-hidden="true"></i><span>SQL</span></li>
+          <li class="skill reveal" style="--d:.35s"><i class="devicon-r-plain colored" aria-hidden="true"></i><span>R</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ 4. PROJECTS ============ -->
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <p class="kicker reveal">03 / projects</p>
+        <h2 class="section-title reveal" id="projects-title">Projects</h2>
+
+        <!-- Cards are created by script.js from the PROJECTS list. Nothing to edit here. -->
+        <div class="projects-grid" id="projects-grid"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ 5. FOOTER / CONTACT ============ -->
+  <footer class="footer" id="contact" aria-labelledby="contact-title">
+    <div class="container">
+      <h2 class="section-title reveal" id="contact-title">Let's connect</h2>
+      <p class="footer-text reveal">Open to internships, collaborations and questions about my projects.</p>
+
+      <!-- Icons are created by script.js from the CONTACT list. Empty links are hidden. -->
+      <ul class="social" id="social" aria-label="Contact links"></ul>
+
+      <p class="copyright">&copy; 2026 Vinson Mervin</p>
+    </div>
+  </footer>
+
+  <noscript>
+    <p class="noscript">This portfolio needs JavaScript for the project cards and animations.</p>
+  </noscript>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
