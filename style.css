@@ -166,7 +166,6 @@ main, .footer, .navbar { position: relative; z-index: 1; }
 .section { padding: 96px 0; position: relative; z-index: 1; }
 .kicker { font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent); margin-bottom: 8px; }
 .section-title { font-family: var(--font-head); font-size: clamp(1.9rem, 4.5vw, 2.8rem); line-height: 1.15; margin-bottom: 36px; }
-.sub-title { font-family: var(--font-head); font-size: 1.25rem; margin: 48px 0 18px; }
 
 /* ---------- 8. Scroll-in animation ----------
    Elements with class "reveal" start hidden and slide up when script.js adds "visible".
@@ -202,17 +201,6 @@ main, .footer, .navbar { position: relative; z-index: 1; }
 .stat-value { font-family: var(--font-head); font-size: 3.6rem; font-weight: 700; color: var(--accent); line-height: 1.1; margin: 6px 0; }
 .stat-value span { font-size: 1.3rem; color: var(--muted); font-weight: 500; }
 .stat-note { color: var(--muted); font-size: 0.9rem; }
-
-.hobby-grid { display: grid; gap: 16px; grid-template-columns: 1fr; }
-@media (min-width: 640px) { .hobby-grid { grid-template-columns: repeat(2, 1fr); } }
-.hobby-card {
-  display: flex; align-items: center; gap: 18px; padding: 20px 22px;
-  background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
-}
-.hobby-card:hover { transform: translateY(-4px); border-color: rgba(var(--accent-rgb), 0.5); box-shadow: 0 10px 30px rgba(var(--accent-rgb), 0.12); }
-.hobby-icon { width: 44px; height: 44px; font-size: 2.2rem; line-height: 44px; text-align: center; color: var(--accent); flex-shrink: 0; }
-.hobby-card h4 { font-family: var(--font-head); font-size: 1.1rem; }
-.hobby-card p { color: var(--muted); font-size: 0.95rem; }
 
 /* ---------- 10. Skills ---------- */
 .skills-grid { display: grid; gap: 16px; grid-template-columns: repeat(2, 1fr); }
