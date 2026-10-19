@@ -63,6 +63,15 @@ const PROJECTS = [
     image: "images/tiket-in.png",
   },
   {
+    title: "YouTube Trend Analysis",
+    description:
+      "Analyzed 3,000 videos across 15 tech-review channels with YouTube Data API, Python and SQLite. Built fair channel/format/age-group performance metrics, SQL analysis, breakout detection and an interactive Streamlit dashboard.",
+    tech: ["Python", "YouTube Data API", "SQLite", "pandas", "Streamlit"],
+    github: "https://github.com/vie-m/youtube-trend-analysis",
+    live: "https://youtube-trend-analysis-l5bvfkbe8ce35rgcipobon.streamlit.app/",
+    image: "images/youtube-trends.png",
+  },
+  {
     title: "Olist E-commerce Data Warehouse",
     description:
       "Data warehouse for 100K Brazilian e-commerce orders: PostgreSQL star schema, Pentaho ETL, 12 SQL queries, RFM customer segmentation and dashboards.",
